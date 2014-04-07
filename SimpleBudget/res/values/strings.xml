@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple Budget</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="how_to">
+		<![CDATA[
+		<p><b>Add Cost</b> - click to add description and value of cost</p>
+		<p></p>
+		<p><b>Add Pay</b> - click to add description and value of income</p>
+		<p></p>
+		<p><b>Delete Item</b> - deletes selected item from list</p>
+		<p></p>
+		<p><b>Clear All</b> - clears all items in list</p>
+		<p></p>
+		<p><b>Remaining</b> - displays total of items. Turns red if negative</p>
+		<p></p>
+		]]>
+	</string>
+
+</resources>
