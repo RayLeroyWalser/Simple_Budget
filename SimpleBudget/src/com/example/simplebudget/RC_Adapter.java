@@ -16,7 +16,7 @@ public class RC_Adapter extends SimpleAdapter {
 			int resource, String[] from, int[] to) {
 		super(context, data, resource, from, to);
 		contextpass = context;
-		// TODO Auto-generated constructor stub
+
 	}
 	@Override
 	public View getView(int position,View convertView,ViewGroup parent){
