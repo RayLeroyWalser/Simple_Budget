@@ -54,13 +54,15 @@
 	    android:id="@+id/tvRemain"
 	    android:layout_width="170dp"
 	    android:layout_height="25dp"
-	    android:layout_alignBottom="@+id/lvCosts"
-	    android:layout_alignLeft="@+id/btnClear"
+        android:layout_alignLeft="@+id/btnClear"
 	    android:background="@color/blue_bayoux"
 	    android:paddingLeft="10dp"
 	    android:text="Remaining"
 	    android:textAppearance="?android:attr/textAppearanceMedium"
-	    android:textColor="@color/quill_gray" />
+	    android:textColor="@color/quill_gray"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="30dp" />
 
 	<Button
 	    android:id="@+id/btnDeleteCost"
