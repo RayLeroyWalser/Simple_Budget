@@ -59,7 +59,7 @@ ArrayList<HashMap<String,String>> arrCosts = new ArrayList<HashMap<String,String
         }
 
         arrCosts = dataFragment.getData();
-        if (!arrCosts.isEmpty()){DisplayItems();}
+
 
 		//get preference for welcome screen
 		mPrefs=PreferenceManager.getDefaultSharedPreferences(this);
@@ -78,6 +78,7 @@ ArrayList<HashMap<String,String>> arrCosts = new ArrayList<HashMap<String,String
 				}
 			}
 		});
+        if (!arrCosts.isEmpty()){DisplayItems();}
     }
 
     @Override
