@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="horizontal"
 	android:layout_width="match_parent"
@@ -11,102 +11,100 @@
 	android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin">
 
-	<Button
-		android:id="@+id/btnAddCost"
-		android:layout_width="85dp"
-		android:layout_height="30dp"
-		android:layout_alignParentLeft="true"
-		android:onClick="fnAddCost"
-		android:text="Add Cost"
-		android:textColor="@color/quill_gray"
-		android:background="@drawable/btnxml"
-		android:textSize="15sp">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight=".25"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
-		<requestFocus/>
+        <Button
+            android:id="@+id/btnAddCost"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:onClick="fnAddCost"
+            android:text="Cost"
+            android:textColor="@color/quill_gray"
+            android:background="@drawable/btnxml"
+            android:textSize="15sp">
+            <requestFocus/>
+        </Button>
 
-	</Button>
+        <Button
+            android:id="@+id/btnAddPay"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:onClick="fnAddPay"
+            android:text="Pay"
+            android:textColor="@color/quill_gray"
+            android:background="@drawable/btnxml"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"/>
 
-	<Button
-		android:id="@+id/btnAddPay"
-		android:layout_width="85dp"
-		android:layout_height="30dp"
-		android:layout_toRightOf="@id/btnAddCost"
-		android:layout_marginLeft="10dp"
-		android:onClick="fnAddPay"
-		android:text="Add Pay"
-		android:textColor="@color/quill_gray"
-		android:background="@drawable/btnxml"
-		android:textSize="15sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="false" />
+        <Button
+            android:id="@+id/btnDeleteCost"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/btnxml"
+            android:onClick="fnDeleteCost"
+            android:text="Delete"
+            android:textColor="@color/quill_gray"
+            android:textSize="15sp"
+            android:layout_below="@+id/btnAddPay"
+            android:layout_marginTop="5dp" />
 
-	<ListView
-	    android:id="@+id/lvCosts"
-	    android:layout_width="300dp"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentRight="true"
-	    android:layout_centerHorizontal="false"
-        android:choiceMode="multipleChoice"
-	    android:clickable="true"
-        android:layout_below="@+id/btnAddPay">
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/btnxml"
+            android:onClick="fnClear"
+            android:text="Clear All"
+            android:textColor="@color/quill_gray"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"/>
 
-	</ListView>
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/btnxml"
+            android:onClick="fnPrevBal"
+            android:text="Use Previous Balance"
+            android:textColor="@color/quill_gray"
+            android:textSize="10sp"
+            android:layout_marginTop="15dp" />
 
-	<TextView
-	    android:id="@+id/tvRemain"
-	    android:layout_width="170dp"
-	    android:layout_height="25dp"
-        android:background="@color/blue_bayoux"
-	    android:paddingLeft="10dp"
-	    android:text="Remaining"
-	    android:textAppearance="?android:attr/textAppearanceMedium"
-	    android:textColor="@color/quill_gray"
-        android:layout_alignStart="@+id/lvCosts"
-        android:layout_alignRight="@+id/lvCosts"
-        android:layout_alignEnd="@+id/lvCosts"
-        android:layout_alignParentTop="true" />
+    </LinearLayout>
 
-	<Button
-	    android:id="@+id/btnDeleteCost"
-	    android:layout_width="85dp"
-	    android:layout_height="30dp"
-	    android:layout_alignLeft="@+id/btnAddPay"
-	    android:layout_below="@+id/btnAddPay"
-	    android:layout_marginTop="29dp"
-	    android:background="@drawable/btnxml"
-	    android:onClick="fnDeleteCost"
-	    android:text="Delete Item"
-	    android:textColor="@color/quill_gray"
-	    android:textSize="15sp" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight=".5"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp">
+        <TextView
+            android:id="@+id/tvRemain"
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:background="@color/blue_bayoux"
+            android:text="Remaining"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/quill_gray"
+            android:layout_alignParentTop="true" />
 
-	<Button
-	    android:id="@+id/btnClear"
-	    android:layout_width="85dp"
-	    android:layout_height="30dp"
-	    android:layout_alignBaseline="@+id/btnDeleteCost"
-	    android:layout_alignBottom="@+id/btnDeleteCost"
-	    android:layout_toLeftOf="@+id/btnAddPay"
-	    android:background="@drawable/btnxml"
-	    android:onClick="fnClear"
-	    android:text="Clear All"
-	    android:textColor="@color/quill_gray"
-	    android:textSize="15sp" />
+        <ListView
+            android:id="@+id/lvCosts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="multipleChoice"
+            android:clickable="true"
+            android:layout_below="@+id/tvRemain"
+            android:layout_marginTop="15dp">
+        </ListView>
 
-	<Button
-	    android:id="@+id/button1"
-	    style="?android:attr/buttonStyleSmall"
-	    android:layout_width="wrap_content"
-	    android:layout_height="30dp"
-	    android:layout_alignLeft="@+id/btnClear"
-	    android:layout_below="@+id/btnDeleteCost"
-	    android:layout_marginTop="31dp"
-	    android:background="@drawable/btnxml"
-	    android:onClick="fnPrevBal"
-	    android:text="Use Previous Balance"
-	    android:textColor="@color/quill_gray"
-	    android:textSize="10sp"
-        android:layout_alignRight="@+id/btnDeleteCost"
-        android:layout_alignEnd="@+id/btnDeleteCost" />
 
-</RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
 
