@@ -114,6 +114,7 @@ ArrayList<HashMap<String,String>> arrCosts = new ArrayList<HashMap<String,String
 	}
 	
 	public void fnPrevBal(View view){
+        //TODO: move this to menu. add in import/export to csv capabilities in menu also
 		//create a new hashmap to hold info
 		HashMap<String,String> map = new HashMap<String,String>();
 		String tmpType;
